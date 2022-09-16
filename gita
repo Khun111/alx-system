@@ -2,6 +2,9 @@
 if [ $# -eq "2" ]
 then
 	git add -A && git commit -am "$1" && git push origin $2
-else
+elif [ $# -eq "1" ]
+then
 	git add -A && git commit -am "$1" && git push
+else
+	echo "Enter: ./gita 'commit message' branch"
 fi
