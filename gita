@@ -1,2 +1,7 @@
 #!/bin/bash
-git add -A && git commit -am "$1" && git push
+if [ $# -eq "2" ]
+then
+	git add -A && git commit -am "$1" && git push origin $2
+else
+	git add -A && git commit -am "$1" && git push
+fi
